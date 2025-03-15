@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-const isProd = process.env.NODE_ENV === "production";
-const basePath = isProd ? "/zmelek" : "";
+
 
 export default function Home() {
   return (
@@ -15,7 +14,7 @@ export default function Home() {
           <div className="hero-main">
             <div className="profile-image">
             <Image
-              src={`${basePath}/images/profile.jpg`} // Works in both dev & prod
+              src="/images/profile.jpg" // No basePath needed, public/ maps to root
               alt="Profile"
               width={300}
               height={300}
