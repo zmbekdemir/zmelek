@@ -1,10 +1,10 @@
-import type { NextConfig } from "next";
+const isProd = process.env.NODE_ENV === "production";
 
-const nextConfig: NextConfig = {
-  basePath: "/zmelek",  // Your repository name
-  assetPrefix: "/zmelek", // Ensures assets load correctly
+const nextConfig = {
+  basePath: isProd ? "/zmelek" : "", // Use basePath only in production
+  assetPrefix: isProd ? "/zmelek" : "",
   images: {
-    unoptimized: true, // Required for static exports (GitHub Pages doesn't support Next.js Image Optimization)
+    unoptimized: true, // Needed for GitHub Pages
   },
 };
 

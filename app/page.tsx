@@ -1,5 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
+const isProd = process.env.NODE_ENV === "production";
+const basePath = isProd ? "/zmelek" : "";
 
 export default function Home() {
   return (
@@ -13,7 +15,7 @@ export default function Home() {
           <div className="hero-main">
             <div className="profile-image">
             <Image
-              src="/zmelek/images/profile.jpg" // Add your GitHub repo name as a base path
+              src={`${basePath}/images/profile.jpg`} // Works in both dev & prod
               alt="Profile"
               width={300}
               height={300}
