@@ -15,8 +15,8 @@ export default function Home() {
               <Image
                 src="/images/profile.jpg"
                 alt="Profile"
-                fill
-                sizes="350px"
+                width={300}
+                height={300}
                 className="rounded-full object-cover"
                 priority
                 quality={100}
