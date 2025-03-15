@@ -12,15 +12,15 @@ export default function Home() {
           <h2>Computer Engineering Student at ITU</h2>
           <div className="hero-main">
             <div className="profile-image">
-              <Image
-                src="/images/profile.jpg"
-                alt="Profile"
-                width={300}
-                height={300}
-                className="rounded-full object-cover"
-                priority
-                quality={100}
-              />
+            <Image
+              src="/zmelek/images/profile.jpg" // Add your GitHub repo name as a base path
+              alt="Profile"
+              width={300}
+              height={300}
+              className="rounded-full object-cover"
+              priority
+              quality={100}
+            />
             </div>
             <div className="cta-buttons">
               <Link href="/about" className="btn secondary">About Me</Link>
